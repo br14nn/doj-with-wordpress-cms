@@ -1,11 +1,18 @@
-import React from "react";
+import { twMerge } from "tailwind-merge";
 
-export default function NavbarSearch() {
+interface INavbarSearchProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
+
+export default function NavbarSearch(props: INavbarSearchProps) {
   return (
     <input
-      className="hidden h-[34px] w-[250px] rounded-md border-2 border-blue-whale px-2 outline-none xl:block"
+      className={twMerge(
+        "hidden h-[34px] w-[200px] rounded-md border-2 border-blue-whale px-2 outline-none transition-colors duration-300 focus:border-apache xl:block 2xl:w-[250px]",
+        props.className,
+      )}
       type="text"
       placeholder="search"
+      {...props}
     />
   );
 }

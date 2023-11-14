@@ -1,4 +1,4 @@
-type TDropdownLink = {
-  href: string;
+interface INavbarLink {
   title: string;
-};
+  href: string;
+}

@@ -55,13 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${merriweather.className} bg-slate-100`}>
-        <Navbar>
-          {navbarLinks.map((link) => (
-            <NavbarLink key={nanoid()} href={link.href}>
-              {link.title}
-            </NavbarLink>
-          ))}
-        </Navbar>
+        <Navbar navbarLinks={navbarLinks} />
+
         {children}
       </body>
     </html>

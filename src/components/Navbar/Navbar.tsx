@@ -40,7 +40,7 @@ export default function Navbar(props: INavbarProps) {
         <NavbarSearch />
         <NavOpenButton onClick={() => setNavState("open")} />
         {navState === "open" && (
-          <NavBackground onClick={() => console.log("close")} />
+          <NavBackground onClick={() => setNavState("close")} />
         )}
       </motion.nav>
     </>

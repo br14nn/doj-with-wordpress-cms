@@ -13,7 +13,7 @@ export default function NavbarLink(props: INavbarLinkProps) {
   return (
     <Link
       className={twMerge(
-        "flex h-fit items-center bg-white px-4 py-4 text-gray-500 transition-colors duration-300 hover:bg-blue-whale hover:text-apache lg:h-full lg:py-0 2xl:text-lg",
+        "flex h-fit items-center bg-white px-8 py-4 text-gray-500 transition-colors duration-300 hover:bg-blue-whale hover:text-apache lg:h-full lg:px-4 lg:py-0 2xl:text-lg",
         props.className,
       )}
       {...props}

@@ -18,7 +18,7 @@ export default function ImageSlider() {
         disableOnInteraction: false,
       }}
       loop={true}
-      className="h-[800px] w-full"
+      className="h-[400px] w-full 3xl:h-[800px]"
     >
       <SwiperSlide className="bg-red-500 ">Image 1</SwiperSlide>
       <SwiperSlide className="bg-green-500">Image 2</SwiperSlide>

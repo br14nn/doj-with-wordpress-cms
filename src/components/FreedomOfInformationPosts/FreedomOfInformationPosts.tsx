@@ -8,7 +8,7 @@ export default async function FreedomOfInformationPosts() {
     posts !== null &&
     posts.data.map((post) => (
       <CustomNewsCard
-        className="h-[300px] w-full border-white bg-apache sm:h-[200px] sm:w-[300px] lg:h-[300px] lg:w-[400px]"
+        className="h-[300px] w-full border-white bg-apache sm:h-[200px] lg:h-[300px]"
         imageContainerClass="h-[80%] lg:h-[85%]"
         titleClass="text-black font-bold h-[20%] lg:h-[15%] px-4 py-0 flex justify-center"
         thumbnailImage={

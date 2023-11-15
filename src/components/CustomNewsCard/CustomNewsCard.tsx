@@ -19,7 +19,7 @@ export default function CustomNewsCard(props: TCustomNewsCardProps) {
   return (
     <div
       className={twMerge(
-        "group/news flex h-[300px] w-full flex-col border-2 border-stone-800 bg-blue-whale shadow-lg shadow-black/30 transition-all duration-300 hover:scale-105 sm:h-[400px] sm:w-[300px] lg:h-[400px] lg:w-[400px]",
+        "group/news flex h-[300px] w-full flex-col border-2 border-stone-800 bg-blue-whale shadow-lg shadow-black/30 transition-all duration-300 hover:scale-105 sm:h-[400px] lg:h-[400px] ",
         props.className,
       )}
     >

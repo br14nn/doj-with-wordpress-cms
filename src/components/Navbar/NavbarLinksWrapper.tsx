@@ -1,14 +1,12 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { IconContext } from "react-icons";
-import { BsXLg } from "react-icons/bs";
 import NavCloseButton from "./NavCloseButton";
 
-interface INavbarLinksWrapper {
+type TNavbarLinksWrapper = {
   children?: React.ReactNode;
   onClickCloseNav: React.MouseEventHandler;
-}
+};
 
 const variants: Variants = {
   close: {
@@ -19,7 +17,7 @@ const variants: Variants = {
   },
 };
 
-export default function NavbarLinksWrapper(props: INavbarLinksWrapper) {
+export default function NavbarLinksWrapper(props: TNavbarLinksWrapper) {
   return (
     <motion.div
       variants={variants}

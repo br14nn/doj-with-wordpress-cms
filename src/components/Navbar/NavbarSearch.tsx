@@ -1,9 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
-interface INavbarSearchProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+type TNavbarSearchProps = {
+  className?: string;
+};
 
-export default function NavbarSearch(props: INavbarSearchProps) {
+export default function NavbarSearch(props: TNavbarSearchProps) {
   return (
     <input
       className={twMerge(
@@ -12,7 +13,6 @@ export default function NavbarSearch(props: INavbarSearchProps) {
       )}
       type="text"
       placeholder="search"
-      {...props}
     />
   );
 }

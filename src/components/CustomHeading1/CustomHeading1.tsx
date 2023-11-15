@@ -1,17 +1,16 @@
 import { twMerge } from "tailwind-merge";
 
-interface ICustomHeading1Props
-  extends React.HTMLAttributes<HTMLDivElement | HTMLHRElement> {
+type TCustomHeading1Props = {
+  className?: string;
   children?: React.ReactNode;
   underlineColor?: "border-blue-whale" | "border-apache";
-}
+};
 
-export default function CustomHeading1(props: ICustomHeading1Props) {
+export default function CustomHeading1(props: TCustomHeading1Props) {
   return (
     <div className="flex flex-col items-center gap-4">
       <h1
         className={twMerge("3xl:text-7xl text-5xl font-bold", props.className)}
-        {...props}
       >
         {props.children}
       </h1>

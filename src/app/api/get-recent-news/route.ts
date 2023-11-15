@@ -1,4 +1,3 @@
-import fetchRecentNews from "@/libs/fetchers/fetchRecentNews";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {

@@ -18,6 +18,7 @@ const config: Config = {
         apache: "#E2C173",
       },
       screens: {
+        zero: "0px",
         sm: "640px",
         // => @media (min-width: 640px) { ... }
 

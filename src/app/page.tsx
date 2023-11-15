@@ -21,30 +21,29 @@ export default async function Home() {
         </CustomHeading1>
 
         <div className="grid grid-cols-1 place-items-center gap-16 md:grid-cols-2 2xl:grid-cols-3">
-          {recentNewsData.data &&
-            recentNewsData.data.map((news) => (
-              <CustomNewsCard
-                key={nanoid()}
-                thumbnailWidth={
-                  news._embedded["wp:featuredmedia"][0]["media_details"][
-                    "sizes"
-                  ]["full"].width
-                }
-                thumbnailHeight={
-                  news._embedded["wp:featuredmedia"][0]["media_details"][
-                    "sizes"
-                  ]["full"].height
-                }
-                thumbnailImage={
-                  news._embedded["wp:featuredmedia"][0]["media_details"][
-                    "sizes"
-                  ]["full"].source_url
-                }
-                thumbnailAlt={news["_embedded"]["wp:featuredmedia"][0].alt_text}
-              >
-                {news["title"]["rendered"].toUpperCase()}
-              </CustomNewsCard>
-            ))}
+          {recentNewsData.data.map((news) => (
+            <CustomNewsCard
+              key={nanoid()}
+              thumbnailWidth={
+                news._embedded["wp:featuredmedia"][0]["media_details"]["sizes"][
+                  "full"
+                ].width
+              }
+              thumbnailHeight={
+                news._embedded["wp:featuredmedia"][0]["media_details"]["sizes"][
+                  "full"
+                ].height
+              }
+              thumbnailImage={
+                news._embedded["wp:featuredmedia"][0]["media_details"]["sizes"][
+                  "full"
+                ].source_url
+              }
+              thumbnailAlt={news["_embedded"]["wp:featuredmedia"][0].alt_text}
+            >
+              {news["title"]["rendered"].toUpperCase()}
+            </CustomNewsCard>
+          ))}
         </div>
       </section>
     </main>

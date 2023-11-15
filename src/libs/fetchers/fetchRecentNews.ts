@@ -6,5 +6,5 @@ export default async function () {
     cache: "no-store",
   });
 
-  return await res.json();
+  return res.json();
 }

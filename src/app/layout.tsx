@@ -58,6 +58,8 @@ export default function RootLayout({
         <Navbar navbarLinks={navbarLinks} />
 
         {children}
+
+        <footer className="w-full bg-gray-400 p-5"></footer>
       </body>
     </html>
   );

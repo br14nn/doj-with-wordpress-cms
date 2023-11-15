@@ -4,6 +4,6 @@
 const local = "http://localhost:3000";
 const official = "https://new-doj-website.vercel.app";
 
-const domainURL = official;
+const domainURL = local;
 
 export default domainURL;

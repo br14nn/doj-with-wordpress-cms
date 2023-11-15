@@ -1,6 +1,6 @@
-interface IImageSlideProps {
+type IImageSlideProps = {
   children?: string;
-}
+};
 
 export default function ImageSlide(props: IImageSlideProps) {
   return (

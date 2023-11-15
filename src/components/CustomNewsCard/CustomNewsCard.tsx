@@ -2,13 +2,13 @@ import CustomNewsCardCustomLink from "./CustomNewsCardCustomLink";
 import CustomNewsCardImage from "./CustomNewsCardImage";
 import CustomNewsCardTitle from "./CustomNewsCardTitle";
 
-interface TCustomNewsCardProps {
+type TCustomNewsCardProps = {
   thumbnailWidth: number;
   thumbnailHeight: number;
   thumbnailImage: string;
   thumbnailAlt: string;
   children?: React.ReactNode;
-}
+};
 
 export default function CustomNewsCard(props: TCustomNewsCardProps) {
   return (

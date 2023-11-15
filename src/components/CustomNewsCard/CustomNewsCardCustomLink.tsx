@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-interface TCustomNewsCardCustomLinkProps {
+type TCustomNewsCardCustomLinkProps = {
   className?: string;
   href: string;
   children?: string;
-}
+};
 
 export default function CustomNewsCardCustomLink(
   props: TCustomNewsCardCustomLinkProps,

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
+import { BsTwitter, BsFacebook } from "react-icons/bs";
+
 import Navbar from "@/components/Navbar/Navbar";
-import NavbarLink from "@/components/Navbar/NavbarLink";
-import { nanoid } from "nanoid";
+import { IconContext } from "react-icons";
+import TwitterIcon from "@/components/TwitterIcon";
+import FacebookIcon from "@/components/FacebookIcon";
 
 const merriweather = Open_Sans({
   subsets: ["latin"],
@@ -59,7 +62,16 @@ export default function RootLayout({
 
         {children}
 
-        <footer className="w-full bg-gray-400 p-5"></footer>
+        <footer className="flex w-full flex-row items-center justify-between bg-gray-400 p-5">
+          <p className="leading-none">
+            © 2018 Department of Justice. All Rights Reserved :: Sitemap :: DOJ
+            Action Center - Email: dojac@doj.gov.ph
+          </p>
+          <div className="flex flex-row items-center justify-center gap-4">
+            <TwitterIcon />
+            <FacebookIcon />
+          </div>
+        </footer>
       </body>
     </html>
   );

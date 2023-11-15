@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import CustomHeading1Hr from "./CustomHeading1Hr";
 
 type TCustomHeading1Props = {
   className?: string;
@@ -10,16 +11,14 @@ export default function CustomHeading1(props: TCustomHeading1Props) {
   return (
     <div className="flex flex-col items-center gap-4">
       <h1
-        className={twMerge("3xl:text-7xl text-5xl font-bold", props.className)}
+        className={twMerge(
+          "text-center text-5xl font-bold 3xl:text-7xl",
+          props.className,
+        )}
       >
         {props.children}
       </h1>
-      <hr
-        className={twMerge(
-          "3xl:w-[200px] 3xl:border-4 w-[100px] border-2 border-blue-whale",
-          props.underlineColor,
-        )}
-      />
+      <CustomHeading1Hr className={props.underlineColor} />
     </div>
   );
 }

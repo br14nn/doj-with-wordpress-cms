@@ -23,7 +23,7 @@ export default async function ProgramsPosts() {
             "full"
           ].height
         }
-        thumbnailAlt={post._embedded["wp:featuredmedia"]["alt_text"]}
+        thumbnailAlt="programs"
         title={post.title.rendered}
       >
         {post.content.rendered.replace(/<\/?p>/g, "")}

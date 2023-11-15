@@ -11,7 +11,10 @@ export default function CustomHeading1(props: TCustomHeading1Props) {
   return (
     <div className="flex flex-col items-center gap-4">
       <h1
-        className={twMerge("text-5xl font-bold 3xl:text-7xl", props.className)}
+        className={twMerge(
+          "text-center text-5xl font-bold 3xl:text-7xl",
+          props.className,
+        )}
       >
         {props.children}
       </h1>

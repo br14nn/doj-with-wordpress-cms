@@ -1,19 +1,29 @@
 import { useSwiper } from "swiper/react";
 
 import { IconContext } from "react-icons";
-import { BsCaretRight } from "react-icons/bs";
+import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 
 export default function ImageSliderButtons() {
   const swiper = useSwiper();
 
   return (
-    <div className="index-[999] absolute w-full bg-black">
+    <>
       <button
-        className="h-[32px] w-[32px] bg-black"
+        className="absolute bottom-0 right-4 top-0 z-[999] my-auto h-fit w-fit rounded p-2 transition-colors duration-300 hover:bg-blue-whale"
         onClick={() => swiper.slideNext()}
       >
-        <BsCaretRight />
+        <IconContext.Provider value={{ size: "32px", color: "#ffffff" }}>
+          <BsCaretRightFill />
+        </IconContext.Provider>
       </button>
-    </div>
+      <button
+        className="absolute bottom-0 left-4 top-0 z-[999] my-auto h-fit w-fit rounded p-2 transition-colors duration-300 hover:bg-blue-whale"
+        onClick={() => swiper.slidePrev()}
+      >
+        <IconContext.Provider value={{ size: "32px", color: "#ffffff" }}>
+          <BsCaretLeftFill />
+        </IconContext.Provider>
+      </button>
+    </>
   );
 }

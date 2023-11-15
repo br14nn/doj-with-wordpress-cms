@@ -7,9 +7,7 @@ export default async function () {
       },
     });
 
-    const data = await res.json();
-
-    return data;
+    return res.json();
   } catch (error) {
     return { data: null, ok: false };
   }

@@ -1,4 +1,4 @@
-import fetchRecentNews from "@/utils/fetchers/fetchRecentNews";
+import fetchRecentNews from "@/libs/fetchers/fetchRecentNews";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
@@ -11,6 +11,6 @@ export async function GET() {
 
     return NextResponse.json({ data: res, ok: true });
   } catch (error) {
-    return NextResponse.json({ ok: false });
+    return NextResponse.json({ data: null, ok: false });
   }
 }

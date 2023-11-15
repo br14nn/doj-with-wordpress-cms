@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import CustomHeading1 from "@/components/CustomHeading1/CustomHeading1";
 import CustomNewsCard from "@/components/CustomNewsCard/CustomNewsCard";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
-import fetchRecentNews from "@/utils/fetchers/fetchRecentNews";
+import fetchRecentNews from "@/libs/fetchers/fetchRecentNews";
 
 export default async function Home() {
   const recentNewsData: { data: any[]; ok: boolean } = await fetchRecentNews();
@@ -21,7 +21,7 @@ export default async function Home() {
         </CustomHeading1>
 
         <div className="grid grid-cols-1 place-items-center gap-16 md:grid-cols-2 2xl:grid-cols-3">
-          {recentNewsData.data &&
+          {recentNewsData.data !== null &&
             recentNewsData.data.map((news) => (
               <CustomNewsCard
                 key={nanoid()}

@@ -7,7 +7,7 @@ export default function NavbarSearch(props: INavbarSearchProps) {
   return (
     <input
       className={twMerge(
-        "hidden h-[34px] w-[200px] rounded-md border-2 border-blue-whale px-2 outline-none transition-colors duration-300 focus:border-apache xl:block 2xl:w-[250px]",
+        "hidden h-[34px] w-[200px] border-2 border-gray-400 px-2 outline-none transition-colors duration-300 focus:border-blue-whale xl:block 2xl:w-[250px]",
         props.className,
       )}
       type="text"

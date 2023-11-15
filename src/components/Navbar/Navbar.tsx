@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { IconContext } from "react-icons";
-import { BsList } from "react-icons/bs";
 import { nanoid } from "nanoid";
 
 import DojLogo from "@/assets/images/doj-logo.png";
@@ -15,11 +13,11 @@ import NavbarLink from "./NavbarLink";
 import NavOpenButton from "./NavOpenButton";
 import NavBackground from "./NavBackground";
 
-interface INavbarProps {
+type TNavbarProps = {
   navbarLinks?: INavbarLink[];
-}
+};
 
-export default function Navbar(props: INavbarProps) {
+export default function Navbar(props: TNavbarProps) {
   const [navState, setNavState] = useState<"open" | "close">("close");
 
   return (

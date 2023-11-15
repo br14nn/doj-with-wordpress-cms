@@ -1,18 +1,18 @@
 import { twMerge } from "tailwind-merge";
 
-interface INavbBackgroundProps
-  extends React.HtmlHTMLAttributes<HTMLDivElement> {
-  customCN?: string;
-}
+type TNavbBackgroundProps = {
+  className?: string;
+  onClick?: React.MouseEventHandler;
+};
 
-export default function NavBackground(props: INavbBackgroundProps) {
+export default function NavBackground(props: TNavbBackgroundProps) {
   return (
     <div
       className={twMerge(
         "fixed inset-0 z-[990] h-screen w-screen bg-black/60 lg:hidden",
-        props.customCN,
+        props.className,
       )}
-      {...props}
+      onClick={props.onClick}
     />
   );
 }

@@ -2,6 +2,8 @@ import CustomHeading1 from "@/components/CustomHeading1/CustomHeading1";
 import CustomNewsCard from "@/components/CustomNewsCard/CustomNewsCard";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
 
+import TestImage from "@/assets/images/2.jpg";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center pt-[70px]">
@@ -16,15 +18,15 @@ export default function Home() {
         </CustomHeading1>
 
         <div className="grid grid-cols-1 place-items-center gap-16 md:grid-cols-2 2xl:grid-cols-3">
-          <CustomNewsCard thumbnailImage="">
+          <CustomNewsCard thumbnailImage={TestImage} thumbnailAlt="thumbnail">
             DOJ AWARDS WINNERS OF CREATIVITY SHOOT CONTEST IN CELEBRATION OF THE
             2023 NATIONAL CHILDREN’S MONTH
           </CustomNewsCard>
-          <CustomNewsCard thumbnailImage="">
+          <CustomNewsCard thumbnailImage={TestImage} thumbnailAlt="thumbnail">
             DOJ AWARDS WINNERS OF CREATIVITY SHOOT CONTEST IN CELEBRATION OF THE
             2023 NATIONAL CHILDREN’S MONTH
           </CustomNewsCard>
-          <CustomNewsCard thumbnailImage="">
+          <CustomNewsCard thumbnailImage={TestImage} thumbnailAlt="thumbnail">
             DOJ AWARDS WINNERS OF CREATIVITY SHOOT CONTEST IN CELEBRATION OF THE
             2023 NATIONAL CHILDREN’S MONTH
           </CustomNewsCard>

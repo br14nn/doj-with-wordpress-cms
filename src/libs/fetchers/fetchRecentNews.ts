@@ -2,7 +2,9 @@ export default async function () {
   try {
     const res = await fetch("http://localhost:3000/api/get-recent-news", {
       method: "GET",
-      cache: "no-store",
+      next: {
+        revalidate: 3000,
+      },
     });
 
     const data = await res.json();

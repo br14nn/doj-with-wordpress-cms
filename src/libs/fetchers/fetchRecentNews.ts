@@ -6,5 +6,9 @@ export default async function () {
     cache: "no-store",
   });
 
-  return res.json();
+  try {
+    return await res.json();
+  } catch (error) {
+    return { data: null, ok: false };
+  }
 }

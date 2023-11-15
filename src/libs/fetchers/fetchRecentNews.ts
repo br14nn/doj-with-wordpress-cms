@@ -6,5 +6,5 @@ export default async function () {
     },
   });
 
-  return res.json();
+  return await res.json();
 }

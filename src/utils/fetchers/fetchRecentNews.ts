@@ -1,17 +1,14 @@
 export default async function () {
   try {
-    const fetchRes = await fetch(
-      `http://localhost/dojgov/wp-json/wp/v2/posts?_embed&tags=3`,
-      {
-        method: "GET",
-      },
-    );
+    const res = await fetch("http://localhost:3000/api/get-recent-news", {
+      method: "GET",
+      cache: "no-store",
+    });
 
-    const res = await fetchRes.json();
-    console.log(res[0]["_embedded"]["wp:featuredmedia"][0].link);
+    const data = await res.json();
 
-    return { data: res, ok: true };
+    return data;
   } catch (error) {
-    return { ok: false };
+    return { data: null, ok: false };
   }
 }
